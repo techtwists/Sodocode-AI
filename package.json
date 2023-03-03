@@ -1,6 +1,6 @@
 {
-  "name": "sodo-ai",
-  "displayName": "Sodo AI",
+  "name": "sodocode-ai",
+  "displayName": "Sodocode AI",
   "description": "Generate code from Pseudocode .",
   "version": "0.0.1",
   "engines": {
@@ -14,7 +14,7 @@
   "contributes": {
     "commands": [
       {
-        "command": "sodo-ai.helloWorld",
+        "command": "sodocode-ai.helloWorld",
         "title": "Hello World"
       }
     ]
