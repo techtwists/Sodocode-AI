@@ -17,6 +17,7 @@ Support for additional programming languages.
 
 * Visual Studio Code
 * An active internet connection
+* A API key from platform.openai.com
 
 ## Installation
 
@@ -25,14 +26,13 @@ Support for additional programming languages.
 * Search for "Sodocode AI" in the search bar.
 * Click the "Install" button.
 * Reload Visual Studio Code.
+* Set API Key from Sodocode AI Extension setting.
 
 ## Usage
 
 * Open a file containing pseudocode in Visual Studio Code.
 * Highlight the pseudocode you want to convert to code.
-* Right-click on the highlighted text and select "Generate Code".
-* Select the programming language you want to generate code for.
-* Click the "Generate Code" button.
+* Right-click on the highlighted text and select "Generate From Sodocode AI".
 * The generated code will be inserted into your file at the current cursor position.
 
 ## Disclaimer
