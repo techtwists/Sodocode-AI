@@ -19,7 +19,7 @@ async function generateCodeFromPseudocode(
 
   const getAPI = vscode.workspace.getConfiguration().get("sodocode-ai.apiKey");
   const apiKey = `${getAPI}`;
-  const prompt = `write this "${pseudocode}" to in ${documentType}`;
+  const prompt = `${pseudocode} to in ${documentType}`;
   const response = axios.create({
     headers: {
       Authorization: "Bearer " + apiKey,
