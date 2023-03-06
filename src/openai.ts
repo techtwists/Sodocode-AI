@@ -41,7 +41,7 @@ export async function generateCodeFromPseudocode(
     top_p: 1,
     frequency_penalty: 0,
     presence_penalty: 0,
-    stop: ["//","</code>","#","/*","<!--"],
+    stop: ["//","</code>","/*","<!--"],
   };
 
   const code = await response
