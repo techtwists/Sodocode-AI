@@ -2,7 +2,7 @@
   "name": "sodocode-ai",
   "displayName": "Sodocode AI",
   "description": "Generate code from OpenAI for Pseudocode .",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "publisher": "PurebitOrg",
   "repository": {
     "type": "git",
@@ -12,18 +12,26 @@
     "vscode": "^1.76.0"
   },
   "categories": [
-    "Programming Languages", "Other"
+    "Programming Languages",
+    "Other"
   ],
   "activationEvents": [],
   "main": "./out/extension.js",
   "contributes": {
-    "configuration":{
-      "Title":"Sodocode AI",
-      "properties":{
-        "sodocode-ai.apiKey":{
-          "type":"string",
-          "default":"API Key!"
-
+    "configuration": {
+      "Title": "Sodocode AI",
+      "properties": {
+        "sodocode-ai.apiKey": {
+          "type": "string",
+          "default": "API Key!"
+        },
+        "sodocode-ai.temperature": {
+          "type": "number",
+          "default": 0
+        },
+        "sodocode-ai.maxToken": {
+          "type": "number",
+          "default": 1024
         }
       }
     },
@@ -45,7 +53,11 @@
     }
   },
   "scripts": {
-    "vscode:prepublish": "npm run compile",
+    "vscode:prepublish": "npm run esbuild-base -- --minify",
+    "esbuild-base": "esbuild ./src/extension.ts --bundle --outfile=out/main.js --external:vscode --format=cjs --platform=node",
+    "esbuild": "npm run esbuild-base -- --sourcemap",
+    "esbuild-watch": "npm run esbuild-base -- --sourcemap --watch",
+    "test-compile": "tsc -p ./",
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
     "pretest": "npm run compile && npm run lint",
@@ -60,6 +72,7 @@
     "@typescript-eslint/eslint-plugin": "^5.53.0",
     "@typescript-eslint/parser": "^5.53.0",
     "@vscode/test-electron": "^2.2.3",
+    "esbuild": "^0.17.11",
     "eslint": "^8.34.0",
     "glob": "^8.1.0",
     "mocha": "^10.2.0",
