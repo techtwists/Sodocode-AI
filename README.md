@@ -34,7 +34,7 @@ Support for additional programming languages.
 
 * Open a file containing pseudocode in Visual Studio Code.
 * Highlight the pseudocode you want to convert to code.
-(pseudocode should be like "// write a Typesript ... and end of the line must be have starting point like 'function/import/etc'" )
+(Pseudocode should be like:"// write a Typesript ... and end of the line must be have starting point like 'function/import/etc'" )
 * Right-click on the highlighted text and select "Generate From Sodocode AI".
 * The generated code will be inserted into your file at the end of the line.
 * (Optional) If the generated code is not completed, increase the Max Token size from the extension setting and reselect again(including generated!), then generate again.
