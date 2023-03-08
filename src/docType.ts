@@ -4,11 +4,11 @@ export function getCurrentDocumentPath(): string {
     let editor = vscode.window.activeTextEditor;
     if (!editor) {
         vscode.window.showInformationMessage('No editor is active');
-        return;
+        return'';
     }
     if (!editor.document.fileName.endsWith('.ts')) {
         vscode.window.showInformationMessage('No TypeScript file is open');
-        return;
+        return'';
     }
     let fullPath = editor.document.fileName;
     return fullPath;

@@ -2,8 +2,9 @@
   "name": "sodocode-ai",
   "displayName": "Sodocode AI",
   "description": "Generate code from OpenAI for Pseudocode .",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "publisher": "PurebitOrg",
+  "icon": "./images/sodocode.png",
   "repository": {
     "type": "git",
     "url": "https://github.com/techtwists/Sodocode-AI.git"
