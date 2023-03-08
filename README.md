@@ -2,7 +2,7 @@
 
 Sodocode AI is a VSCode extension that allows you to generate code from pseudocode using natural language processing (NLP) techniques. The extension supports several programming languages, including TypeScript, Java, Javascript, cpp, csharp, php and swift etc.
 
-![Sodocode AI](/images/sodocode_screencast.gif)
+![Sodocode AI](https://raw.githubusercontent.com/techtwists/Sodocode-AI/main/images/sodocode_screencast.gif)
 
 ## Features
 
