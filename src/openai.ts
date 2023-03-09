@@ -41,7 +41,7 @@ export async function generateCodeFromPseudocode(
     top_p: 1,
     frequency_penalty: 0,
     presence_penalty: 0,
-    stop: ["//","</code>","/*","<!--"],
+    stop: ["// ","</code>","/* ","<!--"],
   };
 
   const code = await response
@@ -50,7 +50,7 @@ export async function generateCodeFromPseudocode(
       return result.data.choices[0].text;
     })
     .catch((err) => {
-      if (!err.response.data.error.message) {
+      if (err.response.data.error.message == undefined) {
         vscode.window.showErrorMessage(
           "Error: " + "Something wrong or try again later!"
         );

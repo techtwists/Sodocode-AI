@@ -2,7 +2,7 @@
   "name": "sodocode-ai",
   "displayName": "Sodocode AI",
   "description": "Generate code from OpenAI for Pseudocode .",
-  "version": "0.0.9",
+  "version": "0.1.0",
   "publisher": "PurebitOrg",
   "icon": "images/sodocode.png",
   "repository": {
@@ -24,15 +24,23 @@
       "properties": {
         "sodocode-ai.apiKey": {
           "type": "string",
-          "default": "API Key!"
+          "default": "API Key!",
+          "description": "Get API Key from OpenAI it's free."
         },
         "sodocode-ai.temperature": {
           "type": "number",
-          "default": 0
+          "default": 0,
+          "description": "Defualt: 0, Valid 0 to 1."
         },
         "sodocode-ai.maxToken": {
           "type": "number",
-          "default": 1024
+          "default": 1024,
+          "description": "Default: 1024, Check OpenAI API doc for others value."
+        },
+        "sodocode-ai.typeSpeed": {
+          "type": "number",
+          "default": 100,
+          "description": "Defualt: 100, Valid 0 to 100 ms."
         }
       }
     },
